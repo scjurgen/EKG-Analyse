@@ -7,18 +7,18 @@ Analyse EKG recorded with Mkrzero and a SparkFun Single Lead Heart Rate Monitor 
 Whatever kind of insights you obtain by using this software: don't rely on it. Go to a Cardiologist!
 End of disclaimer.
 
-## ecg
+## ECG
 
 I used an MKRZERO for recording the ECG data. MKRZERO has the advantage of a relative small
 footprint, portable because of LIPO powering and it has an SD card reader slot.
 
 The Sparkfun AD8232 is a simple recorder witch can be used with standard ECG pads.
 
-The recording is done with a 250Hz samplerate.
+The recording is done with a 500Hz samplerate.
 
-## transekg.py
+## AnalyseECG.py
 
-This small programm takes a recorded binary file, filters it usina a lowpass filter to remove hum (50/60Hz).
+This small programm takes a recorded binary file, filters it using a lowpass filter to remove hum (50/60Hz).
 
 It then tries to analyse the PQRST phases of the heartrate signal.
 It can output prints of the timeseries and will also show you zone of interests. 
@@ -28,5 +28,4 @@ data but I used a very simple approach based on some heuristics that look like w
 
 You can save wave files and load the files into a wavefile editor (i.e. Audacity) for some visual inspection.
 
-
-
+[file://sample.png]
